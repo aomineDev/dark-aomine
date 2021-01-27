@@ -9,5 +9,5 @@
 if (isset($_COOKIE['admin'])) {
 	setcookie('admin', '', time() - 100, '/');
 }
-echo "<script>location.href='index.html'</script>";
+echo "<script>location.href='../index.html'</script>";
 ?>

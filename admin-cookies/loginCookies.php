@@ -8,7 +8,7 @@
 <?php 
 if(isset($_POST)){
   // Conexion
-	require_once 'conex.php';
+	require_once '../server/conex.php';
 
   // Recolección de datos
 	$username = isset($_POST['username']) ? $conex->real_escape_string(trim($_POST['username'])) : null;
@@ -55,6 +55,6 @@ if(isset($_POST)){
 			echo "<script> alert('Que mal... no se puedo crear la cuenta :\'v')</script>";
 		}
 	}
-	echo "<script>location.href='adminCookies.php'</script>";
+	echo "<script>location.href='index.php'</script>";
 }
 ?>
