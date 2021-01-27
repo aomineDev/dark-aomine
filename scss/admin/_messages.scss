@@ -1,0 +1,34 @@
+// MESSAGES
+
+.messages {
+	padding-top: 60px;
+	padding-bottom: 20px;
+	@extend %container;
+	@extend %section-front;
+	&-title{
+		text-align: center;
+		font-size: 2.5em;
+		font-weight: 600;
+		text-transform: uppercase;
+		@include mobile($bp-sm){
+			font-size: 3em;
+		}
+	}
+	&-data{
+		padding-top: 20px;
+		color: $text-light;
+	}
+	&-name {
+		font-size: 1.5em;
+		font-weight: 500;
+		color: $text-blue;
+	}
+	&-date,
+	&-time {
+		color: $deep-orange;
+		font-size: 16px;
+	}
+	&-desc{
+		font-weight: 600;
+	}
+}

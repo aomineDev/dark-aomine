@@ -1,0 +1,42 @@
+// FOOTER
+
+.footer {
+	padding-top: 50px;
+	&-wrapper {
+		@extend %container;
+	}
+	&-social {
+		display: flex;
+		justify-content: center;
+		&-link {
+			display: block;
+			margin-right: 16px;
+			margin-left: 16px;
+			font-size: 2em;
+			color: rgba(255, 255, 255, .5);
+			transition: .5s;
+			&:hover{
+				color: $text-light;
+			}
+			@include mobile($bp-xs-2){
+				margin-right: 20px;
+				margin-left: 20px;
+			}
+		}
+	}
+	&-copy {
+		display: block;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		text-align: center;
+		font-size: 1em;
+		color: rgba(255, 255, 255, .5);
+		&-author {
+			color: $text-light;
+			transition: .5s;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

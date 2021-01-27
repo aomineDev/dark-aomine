@@ -1,0 +1,73 @@
+// LOGIN
+
+.login {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	@extend %container;
+	@extend %section-front;
+	&-title {
+		text-align: center;
+		color: $text-light;
+	}
+	&-form {
+		width: 100%;
+		max-width: 400px;
+		padding: 40px;
+		background-color: rgba(0, 0, 0, .8);
+		box-shadow: 0 0 25px rgba(0, 0, 0, .5);
+		border-radius: 20px;
+		&-box {
+			position: relative;
+			margin-top: 30px;
+		}
+		&-input {
+			width: 100%;
+			@extend %input;
+			
+			border-bottom: 1px solid $light;
+			background-color: transparent;
+		}
+		&-label {
+			position: absolute;
+			top: 0;
+			left: 0;
+			pointer-events: none;
+		}
+		&-input,
+		&-label {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			font-size: 1em;
+			color: $text-light;
+			transition: .5s;
+		}
+		&-input:focus ~ &-label,
+		&-input:valid ~ &-label {
+			top: -18px;
+			left: 0;
+			color: $text-blue;
+			font-size: 12px;
+		}
+		&-input:focus,
+		&-input:valid {
+			border-bottom: 1px solid $blue;
+		}
+		&-btn{
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+			padding: 10px 20px;
+			margin-top: 30px;
+			border-radius: 20px;
+			background-color: $blue;
+			font-size: 1em;
+			color: $text-light;
+		}
+		&-invalid{
+font-size: 12px;
+color: $red;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+// INTERFACE
+.interface {
+	@extend %section-bg;
+	background-image: url('../img/bg3.jpg');
+	&-wrapper {
+		height: 100vh;
+		overflow: hidden;
+		overflow-y: auto;
+		@extend %scroll-white;
+	}
+}
+

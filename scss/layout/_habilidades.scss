@@ -1,0 +1,87 @@
+// HABILIDADES 
+
+.habilidades {
+	@extend %section-p;
+	&-wrapper {
+		@extend %container;
+	}
+	&-header {
+		@include section-box('header');
+	}
+	&-card-deck {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	&-card {
+		position: relative;
+		width: 300px;
+		height: 440px;
+		margin-top: 40px;
+		border-radius: 20px;
+		overflow: hidden;
+		transition: .5s;
+		&-img-box {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transition: .5s;
+		}
+		&-img {
+			height: 100%;
+			object-fit: cover;
+		}
+		&-content{ 
+			position: absolute;
+			width: 100%;
+			height: 60%;
+			bottom: -100%;
+			padding: 20px;
+			padding-top: 75px;
+			text-align: center;
+			transition: .5s;
+		}
+		&:hover &-content {
+			bottom: 0;
+		}
+		&-title {
+			font-size: 22px;
+		}
+		&-def {
+			display: block;
+			padding-top: 10px; 
+			font-size: 18px;
+		}
+	}
+	&-aos {
+		&:nth-child(1) .habilidades-card:hover {
+			box-shadow: 0 0 10px $deep-orange;
+		}
+		&:nth-child(2) .habilidades-card:hover {
+			box-shadow: 0 0 10px $blue;
+		}
+		&:nth-child(3) .habilidades-card:hover {
+			box-shadow: 0 0 10px $yellow-dark;
+		}
+		&:nth-child(1) .habilidades-card-content {
+			background: linear-gradient(transparent 5%, $deep-orange);
+		}
+		&:nth-child(2) .habilidades-card-content {
+			background: linear-gradient(transparent 5%, $blue);
+		}
+		&:nth-child(3) .habilidades-card-content {
+			background: linear-gradient(transparent 5%, $yellow-dark);
+		}
+		&:nth-child(1) .habilidades-card-def {
+			color: $orange-dark;
+		}
+		&:nth-child(2) .habilidades-card-def {
+			color: $light-blue;
+		}
+		&:nth-child(3) .habilidades-card-def {
+			color: $yellow;
+		}
+	}
+}

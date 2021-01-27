@@ -1,0 +1,14 @@
+// INICIO 
+
+.inicio {
+	@extend %section-center;
+	@extend %section-bg;
+	background-image: url('../img/bg1.jpg');
+	&-banner {
+		@extend %container;
+		@include section-box('banner');
+		&-strong {
+			color: $text-blue;
+		}
+	}
+}

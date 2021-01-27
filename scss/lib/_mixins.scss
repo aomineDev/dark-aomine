@@ -1,0 +1,23 @@
+// MIXINS
+
+// sections
+@mixin section-box($tipe) {
+	@extend %section-box;
+	@if($tipe == 'banner') {
+		&-title {
+			@extend %banner-title;
+		}
+		&-content {
+			@extend %banner-content;
+		}
+	}
+	@else if($tipe == 'header') {
+		@extend %header;
+		&-title {
+			@extend %header-title;
+		}
+		&-content {
+			@extend %header-content;
+		}
+	}
+}

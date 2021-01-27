@@ -1,0 +1,59 @@
+// CONTACTAME
+
+.contactame {
+	@extend %section-bg;
+	background-image: url('../img/bg3.jpg');
+	@extend %section-p;
+	&-wrapper {
+		@extend %container;
+	}
+	&-header {
+		@include section-box('header');
+		margin-bottom: 16px;
+	}
+	&-form {
+		@extend %section-front;
+		@extend %section-65;
+		@include desktop($bp-md){
+			width: 100%;
+		}
+		&-label {
+			display: block;
+			margin-top: 16px;
+			margin-bottom: 8px;
+			font-size: 1.25em;
+		}
+		&-textarea,
+		&-input {
+			width: 100%;
+			padding: 10px;
+			@extend %input;
+			border-radius: 12px;
+			border-bottom: 2px solid rgba(255, 255, 255, .2);
+			font-size: 1.25em;
+			color: rgba(255, 255, 255, .4);
+			background-color: rgba(0, 0, 0, .5);
+			transition: .5s;
+			&:focus,
+			&hover {
+				border-bottom: 2px solid $light;
+				color: $text-light;
+			}
+		}
+		&-input[type=number]::-webkit-inner-spin-button, 
+		&-input[type=number]::-webkit-outer-spin-button {
+			-webkit-appearance: none; 
+		}
+		&-textarea {
+			height: 200px;
+			resize: none;
+			@extend %scroll-white;
+		}
+		&-btn {
+			@extend %btn-one;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

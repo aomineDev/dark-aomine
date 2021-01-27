@@ -1,0 +1,177 @@
+// PLACEHOLDERS 
+
+// container
+%container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	@include mobile($bp-xs) {
+		max-width: 540px;
+	}
+	@include mobile($bp-sm) {
+		max-width: 720px;
+	}
+	@include mobile($bp-md) {
+		max-width: 960px;
+	}	
+	@include mobile($bp-lg) {
+		max-width: 1140px;
+	}
+	@include mobile($bp-lg-1) {
+		max-width: 1280px;
+	}
+}
+
+// SECTIONS
+
+// section-bg
+%section-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+%section-bg {
+	position: relative;
+	z-index: 80;
+	width: 100%;
+	min-height: 100vh;
+	background-size: cover;
+	background-position: 50%;
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 400px;
+		pointer-events: none;
+	}
+	&:before {
+		top: 0;
+		background: linear-gradient(#000, transparent);
+	}
+	&:after {
+		bottom: 0;
+		background: linear-gradient(360deg, #000, transparent);
+	}
+}
+
+//  Section Paddding
+%section-p {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	@include mobile($bp-sm) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+}
+
+// Section Front
+%section-front {
+	position: relative;
+	z-index: 81;
+}
+%section-65 {
+	width: 65%;
+	margin: 0 auto;
+}
+
+// Section
+%section-box {
+	@extend %section-front;
+	text-align: center;
+}
+
+// section banner
+%banner-title {
+	margin-bottom: 8px;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 2.5em;
+	@include mobile($bp-xs) {
+		font-size: 3em;
+	}
+	@include mobile($bp-sm) {
+		font-size: 3.5em;
+	}
+	@include mobile($bp-md) {
+		font-size: 4em;
+	}
+	@include mobile($bp-lg) {
+		font-size: 5em;
+	}
+}
+
+%banner-content {
+	font-size: 1.3em;
+}
+
+// section header
+%header {
+	@extend %section-65;
+}
+%header-title {
+	margin-bottom: 20px;
+	font-weight: 500;
+	font-size: 2em;	
+	@include mobile($bp-xs) {
+		font-size: 2.5em;
+	}
+}
+%header-content {
+	font-size: 1em;
+	@include mobile($bp-xs) {
+		font-size: 1.15em;
+	}
+}
+
+// Buttons
+%btn {
+	display: inline-block;
+	border-radius: 50px;
+}
+%btn-one {
+	@extend %btn;
+	padding: 15px 30px;
+	margin-top: 20px;
+	background-color: $btn-one-bg;
+	font-size: 1.15em;
+	font-weight: 500;
+	color: $btn-one-color;
+}
+%btn-two {
+	@extend %btn;
+	padding: 10px 20px;
+	background-color: $btn-two-bg;
+	font-size: 1em;
+	font-weight: 400;
+	color: $btn-two-color;
+}
+
+// inputs
+%input{
+	border: none;
+	outline: none;
+}
+
+// scroll
+%scroll-white {
+	&::-webkit-scrollbar {
+		border-radius: 8px;
+		width: 8px;
+	}
+	&::-webkit-scrollbar-track {
+		border-radius: 8px;
+		background-color: transparent;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 8px;
+		background-color: rgba(255, 255, 255, .3);
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background-color: rgba(255, 255, 255, .6);
+	}
+}

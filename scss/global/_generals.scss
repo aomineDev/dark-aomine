@@ -1,0 +1,43 @@
+// GENERAL
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+body {
+	background-color: $bg;
+	font-family: $poppins, $sans-serif;
+	color: $text-light;
+
+	// Scroll
+	&::-webkit-scrollbar {
+		width: 12px;
+		height: 12px;
+	}
+	&::-webkit-scrollbar-track {
+		border-radius: 50px;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 50px;
+		background: linear-gradient(#000 25%, rgba(255, 255, 255, .8)); 
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background: linear-gradient(#000 25%, rgba(255, 255, 255, 1));
+	}
+}
+
+// Images
+img {
+	width: 100%;
+	display: block;
+}
+
+// Button & ancla
+button,
+a {
+	cursor: pointer;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}

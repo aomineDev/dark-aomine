@@ -1,0 +1,14 @@
+// PROYECTOS
+
+.proyectos {
+	@extend %section-center;
+	@extend %section-bg;
+	background-image: url('../img/bg2.jpg');
+	&-banner {
+		@extend %container;
+		@include section-box('banner');
+		&-btn {
+			@extend %btn-one;
+		}
+	}
+}

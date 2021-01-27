@@ -11,8 +11,9 @@
 		<?php endif; ?>
 		<!-- GOOGLE FONTS -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-		<!-- CDN -->
+		<!-- DEVELOPMENT -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+		<!-- CDN -->
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 		<!-- OUR STYLES -->
 		<link rel="stylesheet" href="assets/css/styles.css" />
