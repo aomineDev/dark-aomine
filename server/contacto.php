@@ -4,6 +4,7 @@
 		background-color: #000;
 	}
 </style>
+
 <?php 
 // Verificando la llegada de todos los datos
 if (isset($_POST)) {
